@@ -1,10 +1,16 @@
 {
   "name": "server-http",
   "version": "1.0.0",
+  "private": false,
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index",
+    "test": "echo Fazendo Testes",
+    "prebuild": "npm test",
+    "build": "echo Build do Projeto",
+    "postbuild": "echo Subindo Projeto no GitHub",
+    "start": "node index"
   },
   "repository": {
     "type": "git",
@@ -15,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/lucascodev/crud-nodejs/issues"
   },
-  "homepage": "https://github.com/lucascodev/crud-nodejs#readme"
+  "homepage": "https://github.com/lucascodev/crud-nodejs#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
